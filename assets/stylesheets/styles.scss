@@ -1,0 +1,70 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  margin: 0;
+
+  main {
+    padding: 20px;
+
+    section {
+      display: flex;
+
+      &.modal {
+        flex-direction: column;
+        padding: 20px;
+        border: 1px solid black;
+
+        form {
+          display: flex;
+        }
+
+        div.image-gallery {
+          display: grid;
+          grid-template: 1fr 1fr / 1fr 1fr;
+        }
+      }
+
+      button {
+        display: flex;
+        flex-direction: column;
+        margin: 0 20px 0 0;
+        padding: 8px;
+        background: none;
+        border: 1px solid black;
+      }
+    }
+
+    div.modals {
+      display: flex;
+      justify-content: space-around;
+      margin: 20px 0 0 0;
+    }
+  }
+
+  footer {
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      li {
+        padding: 4px 12px;
+        border: 1px solid black;
+        width: 100px;
+      }
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      padding: 4px;
+      border: 1px solid black;
+
+      div {
+        border: 1px solid black;
+      }
+    }
+  }
+}

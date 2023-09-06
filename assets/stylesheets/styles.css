@@ -1,1 +1,57 @@
-
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  margin: 0;
+}
+body main {
+  padding: 20px;
+}
+body main section {
+  display: flex;
+}
+body main section.modal {
+  flex-direction: column;
+  padding: 20px;
+  border: 1px solid black;
+}
+body main section.modal form {
+  display: flex;
+}
+body main section.modal div.image-gallery {
+  display: grid;
+  grid-template: 1fr 1fr/1fr 1fr;
+}
+body main section button {
+  display: flex;
+  flex-direction: column;
+  margin: 0 20px 0 0;
+  padding: 8px;
+  background: none;
+  border: 1px solid black;
+}
+body main div.modals {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0 0 0;
+}
+body footer ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+body footer ul li {
+  padding: 4px 12px;
+  border: 1px solid black;
+  width: 100px;
+}
+body footer nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px;
+  border: 1px solid black;
+}
+body footer nav div {
+  border: 1px solid black;
+}
