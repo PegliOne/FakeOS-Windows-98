@@ -3,31 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FakeOS: Windows 98</title>
+    <script
+      src="https://kit.fontawesome.com/2101b92750.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="./assets/stylesheets/styles.css" />
+    <script src="./script.js" defer></script>
+    <title>FakeOS: Windows 98</title>
   </head>
   <body>
-    <main>
-      <section>
-        <button>
-          <img src="" alt="Add icon" />
-          Hello There
+    <main class="main">
+      <section class="main__buttons">
+        <button value="greetings">
+          <i class="fa-regular fa-face-smile"></i>Greetings
         </button>
-        <button>
-          <img src="" alt="Add icon" />
-          Number Guess
+        <button value="numberGuess">
+          <i class="fa-solid fa-question"></i>Number Guess
         </button>
-        <button>
-          <img src="" alt="Add icon" />
-          Image Gallery
+        <button value="imageGallery">
+          <i class="fa-regular fa-image"></i>Image Gallery
         </button>
       </section>
-      <div class="modals">
-        <section class="modal">
-          <h2>Hello There</h2>
-          <p>Hello There app content</p>
+      <div class="main__modals">
+        <section id="greetings" class="main__modal">
+          <button class="modal__close-button" value="greetings">x</button>
+          <h2>Greetings</h2>
+          <p>Your randomly generated greeting is:</p>
+          <p><strong>Hello there</strong></p>
         </section>
-        <section class="modal">
+        <section id="numberGuess" class="main__modal">
+          <button class="modal__close-button" value="numberGuess">x</button>
           <h2>Number Guess</h2>
           <p>Number Guess app content</p>
           <form>
@@ -36,7 +41,8 @@
           </form>
           <p>More Number Guess app content</p>
         </section>
-        <section class="modal">
+        <section id="imageGallery" class="main__modal">
+          <button class="modal__close-button" value="imageGallery">x</button>
           <h2>Image Gallery</h2>
           <div class="image-gallery">
             <img src="" alt="Image 1" />
@@ -48,21 +54,21 @@
       </div>
     </main>
     <footer>
-      <ul>
-        <li>Programs</li>
-        <li>Photos</li>
-        <li>Applications</li>
-        <li>Games</li>
-        <li>Settings</li>
-        <li>Find</li>
-        <li>Help</li>
-        <li>Run</li>
-        <li>Log Off</li>
-        <li>Shutdown</li>
+      <ul class="menubar__menu">
+        <li><i class="fa-solid fa-computer"></i>Programs</li>
+        <li><i class="fa-solid fa-photo-film"></i>Photos</li>
+        <li><i class="fa-solid fa-mobile-retro"></i>Applications</li>
+        <li><i class="fa-solid fa-gamepad"></i>Games</li>
+        <li><i class="fa-solid fa-gear"></i>Settings</li>
+        <li><i class="fa-solid fa-magnifying-glass"></i>Find</li>
+        <li><i class="fa-solid fa-handshake-angle"></i>Help</li>
+        <li><i class="fa-solid fa-person-running"></i>Run</li>
+        <li><i class="fa-solid fa-user"></i>Log Off</li>
+        <li><i class="fa-solid fa-power-off"></i>Shutdown</li>
       </ul>
       <nav>
-        <button>Start</button>
-        <div>18:21PM</div>
+        <button class="menubar__button">Start</button>
+        <div class="menubar__clock"></div>
       </nav>
     </footer>
   </body>

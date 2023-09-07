@@ -4,6 +4,8 @@ body {
   justify-content: space-between;
   height: 100vh;
   margin: 0;
+  background-image: url(../images/windows-98-background.jpg);
+  background-size: cover;
 }
 body main {
   padding: 20px;
@@ -11,15 +13,21 @@ body main {
 body main section {
   display: flex;
 }
-body main section.modal {
+body main section.main__modal {
+  display: none;
   flex-direction: column;
   padding: 20px;
+  background-color: lightgrey;
   border: 1px solid black;
+  text-align: center;
 }
-body main section.modal form {
+body main section.main__modal--show {
   display: flex;
 }
-body main section.modal div.image-gallery {
+body main section.main__modal form {
+  display: flex;
+}
+body main section.main__modal div.image-gallery {
   display: grid;
   grid-template: 1fr 1fr/1fr 1fr;
 }
@@ -28,30 +36,47 @@ body main section button {
   flex-direction: column;
   margin: 0 20px 0 0;
   padding: 8px;
-  background: none;
+  background-color: lightgrey;
   border: 1px solid black;
 }
-body main div.modals {
+body main section button i {
+  padding: 4px;
+  color: darkblue;
+  font-size: 36px;
+}
+body main div.main__modals {
   display: flex;
   justify-content: space-around;
   margin: 20px 0 0 0;
 }
-body footer ul {
+body footer .menubar__menu {
+  display: none;
   margin: 0;
   padding: 0;
   list-style: none;
 }
-body footer ul li {
+body footer .menubar__menu--show {
+  display: flex;
+  flex-direction: column;
+}
+body footer .menubar__menu li {
+  width: 120px;
   padding: 4px 12px;
+  background-color: lightgrey;
   border: 1px solid black;
-  width: 100px;
+}
+body footer .menubar__menu li i {
+  width: 20px;
+  padding: 0 8px 0 0;
 }
 body footer nav {
   display: flex;
   justify-content: space-between;
   padding: 4px;
+  background-color: lightgrey;
   border: 1px solid black;
 }
-body footer nav div {
+body footer nav .menubar__clock {
+  padding: 2px 4px;
   border: 1px solid black;
 }
