@@ -16,14 +16,22 @@ body {
       .main__button {
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 100px;
         margin: 0 20px 0 0;
         padding: 8px;
+        color: navy;
         background-color: lightgrey;
-        border: 1px solid black;
+        border: 2px solid navy;
+
+        &:hover {
+          background-color: silver;
+          cursor: pointer;
+        }
 
         .button__icon {
           padding: 4px;
-          color: darkblue;
           font-size: 36px;
         }
       }
@@ -37,20 +45,43 @@ body {
       .main__modal {
         display: none;
         flex-direction: column;
-        padding: 20px;
         background-color: lightgrey;
-        border: 1px solid black;
+        border: 2px solid black;
         text-align: center;
 
         &--show {
           display: flex;
+          align-items: flex-end;
+        }
+
+        .modal__close-button {
+          width: fit-content;
+          padding: 4px 8px;
+          border: none;
+
+          &:hover {
+            background-color: silver;
+            cursor: pointer;
+          }
+        }
+
+        .modal__content {
+          padding: 0 20px 12px;
+
+          .modal__heading {
+            margin: 0 0 20px 0;
+          }
+
+          .modal__para {
+            margin: 12px 0;
+          }
         }
 
         .modal__form {
           display: flex;
         }
 
-        .modal__image-gallery {
+        .modal__photo-gallery {
           display: grid;
           grid-template: 1fr 1fr / 1fr 1fr;
         }
@@ -61,24 +92,57 @@ body {
   .menubar {
     .menubar__start-menu {
       display: none;
-      margin: 0;
-      padding: 0;
-      list-style: none;
+      width: max-content;
+      background-color: lightgrey;
+      border: 2px solid white;
+      border-right: 2px solid darkgrey;
+      border-bottom: none;
 
       &--show {
         display: flex;
-        flex-direction: column;
       }
 
-      .menubar__item {
-        width: 120px;
-        padding: 4px 12px;
-        background-color: lightgrey;
-        border: 1px solid black;
+      .start-menu__brand {
+        padding: 8px 4px;
+        color: white;
+        background: linear-gradient(dodgerblue, navy);
+        transform: rotate(180deg);
+        writing-mode: vertical-lr;
+      }
 
-        .item__icon {
-          width: 20px;
-          padding: 0 8px 0 0;
+      .start-menu__list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        &--show {
+          display: flex;
+          flex-direction: column;
+        }
+
+        .start-menu__item {
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: nowrap;
+          padding: 8px 12px;
+
+          &--last {
+            border-bottom: none;
+          }
+
+          &:hover {
+            background-color: silver;
+            cursor: pointer;
+          }
+
+          .item__icon {
+            width: 20px;
+            padding-right: 8px;
+          }
+
+          .item__arrow {
+            padding-left: 8px;
+          }
         }
       }
     }
@@ -88,11 +152,29 @@ body {
       justify-content: space-between;
       padding: 4px;
       background-color: lightgrey;
-      border: 1px solid black;
+      border-top: 2px solid darkgrey;
+
+      .menubar__button {
+        background: none;
+        border: 2px solid darkgrey;
+
+        &--clicked {
+          border: 2px solid black;
+          border-right: 2px solid white;
+          border-bottom: 2px solid white;
+        }
+
+        &:hover {
+          background-color: silver;
+          cursor: pointer;
+        }
+      }
 
       .menubar__clock {
-        padding: 4px 4px 0;
-        border: 1px solid black;
+        padding: 2px 4px;
+        border: 2px solid darkgrey;
+        border-right: 2px solid white;
+        border-bottom: 2px solid white;
       }
     }
   }

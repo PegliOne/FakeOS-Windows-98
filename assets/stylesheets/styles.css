@@ -16,14 +16,21 @@ body .main .main__buttons {
 body .main .main__buttons .main__button {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100px;
   margin: 0 20px 0 0;
   padding: 8px;
+  color: navy;
   background-color: lightgrey;
-  border: 1px solid black;
+  border: 2px solid navy;
+}
+body .main .main__buttons .main__button:hover {
+  background-color: silver;
+  cursor: pointer;
 }
 body .main .main__buttons .main__button .button__icon {
   padding: 4px;
-  color: darkblue;
   font-size: 36px;
 }
 body .main .main__modals {
@@ -34,49 +41,109 @@ body .main .main__modals {
 body .main .main__modals .main__modal {
   display: none;
   flex-direction: column;
-  padding: 20px;
   background-color: lightgrey;
-  border: 1px solid black;
+  border: 2px solid black;
   text-align: center;
 }
 body .main .main__modals .main__modal--show {
   display: flex;
+  align-items: flex-end;
+}
+body .main .main__modals .main__modal .modal__close-button {
+  width: fit-content;
+  padding: 4px 8px;
+  border: none;
+}
+body .main .main__modals .main__modal .modal__close-button:hover {
+  background-color: silver;
+  cursor: pointer;
+}
+body .main .main__modals .main__modal .modal__content {
+  padding: 0 20px 12px;
+}
+body .main .main__modals .main__modal .modal__content .modal__heading {
+  margin: 0 0 20px 0;
+}
+body .main .main__modals .main__modal .modal__content .modal__para {
+  margin: 12px 0;
 }
 body .main .main__modals .main__modal .modal__form {
   display: flex;
 }
-body .main .main__modals .main__modal .modal__image-gallery {
+body .main .main__modals .main__modal .modal__photo-gallery {
   display: grid;
   grid-template: 1fr 1fr/1fr 1fr;
 }
 body .menubar .menubar__start-menu {
   display: none;
+  width: max-content;
+  background-color: lightgrey;
+  border: 2px solid white;
+  border-right: 2px solid darkgrey;
+  border-bottom: none;
+}
+body .menubar .menubar__start-menu--show {
+  display: flex;
+}
+body .menubar .menubar__start-menu .start-menu__brand {
+  padding: 8px 4px;
+  color: white;
+  background: linear-gradient(dodgerblue, navy);
+  transform: rotate(180deg);
+  writing-mode: vertical-lr;
+}
+body .menubar .menubar__start-menu .start-menu__list {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-body .menubar .menubar__start-menu--show {
+body .menubar .menubar__start-menu .start-menu__list--show {
   display: flex;
   flex-direction: column;
 }
-body .menubar .menubar__start-menu .menubar__item {
-  width: 120px;
-  padding: 4px 12px;
-  background-color: lightgrey;
-  border: 1px solid black;
+body .menubar .menubar__start-menu .start-menu__list .start-menu__item {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  padding: 8px 12px;
 }
-body .menubar .menubar__start-menu .menubar__item .item__icon {
+body .menubar .menubar__start-menu .start-menu__list .start-menu__item--last {
+  border-bottom: none;
+}
+body .menubar .menubar__start-menu .start-menu__list .start-menu__item:hover {
+  background-color: silver;
+  cursor: pointer;
+}
+body .menubar .menubar__start-menu .start-menu__list .start-menu__item .item__icon {
   width: 20px;
-  padding: 0 8px 0 0;
+  padding-right: 8px;
+}
+body .menubar .menubar__start-menu .start-menu__list .start-menu__item .item__arrow {
+  padding-left: 8px;
 }
 body .menubar .menubar__main-menu {
   display: flex;
   justify-content: space-between;
   padding: 4px;
   background-color: lightgrey;
-  border: 1px solid black;
+  border-top: 2px solid darkgrey;
+}
+body .menubar .menubar__main-menu .menubar__button {
+  background: none;
+  border: 2px solid darkgrey;
+}
+body .menubar .menubar__main-menu .menubar__button--clicked {
+  border: 2px solid black;
+  border-right: 2px solid white;
+  border-bottom: 2px solid white;
+}
+body .menubar .menubar__main-menu .menubar__button:hover {
+  background-color: silver;
+  cursor: pointer;
 }
 body .menubar .menubar__main-menu .menubar__clock {
-  padding: 4px 4px 0;
-  border: 1px solid black;
+  padding: 2px 4px;
+  border: 2px solid darkgrey;
+  border-right: 2px solid white;
+  border-bottom: 2px solid white;
 }

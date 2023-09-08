@@ -5,6 +5,7 @@ const menubarButton = document.querySelector(".menubar__button");
 
 menubarButton.addEventListener("click", (event) => {
   menubarMenu.classList.toggle("menubar__start-menu--show");
+  menubarButton.classList.toggle("menubar__button--clicked");
 });
 
 // Show/Hide Apps
@@ -41,6 +42,7 @@ setInterval(() => {
   const hours = time.getHours();
   const minutes =
     time.getMinutes() < 10 ? `0${time.getMinutes()}` : time.getMinutes();
-  const timeStr = `${hours}:${minutes}`;
+  const amOrPM = hours < 12 ? "AM" : "PM";
+  const timeStr = `${hours}:${minutes} ${amOrPM}`;
   clock.textContent = timeStr;
 }, 1000);
