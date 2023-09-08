@@ -41,8 +41,9 @@ body .main .main__modals {
 body .main .main__modals .main__modal {
   display: none;
   flex-direction: column;
+  color: navy;
   background-color: lightgrey;
-  border: 2px solid black;
+  border: 2px solid navy;
   text-align: center;
 }
 body .main .main__modals .main__modal--show {
@@ -65,14 +66,28 @@ body .main .main__modals .main__modal .modal__content .modal__heading {
   margin: 0 0 20px 0;
 }
 body .main .main__modals .main__modal .modal__content .modal__para {
+  height: 24px;
   margin: 12px 0;
 }
 body .main .main__modals .main__modal .modal__form {
   display: flex;
+  justify-content: center;
+}
+body .main .main__modals .main__modal .modal__form .form__input {
+  padding: 0 4px;
+  margin-right: 8px;
+  text-align: center;
 }
 body .main .main__modals .main__modal .modal__photo-gallery {
   display: grid;
   grid-template: 1fr 1fr/1fr 1fr;
+  gap: 12px;
+  padding-bottom: 8px;
+}
+body .main .main__modals .main__modal .modal__photo-gallery .photo-gallery__photo {
+  width: 200px;
+  height: 120px;
+  border: 1px solid navy;
 }
 body .menubar .menubar__start-menu {
   display: none;

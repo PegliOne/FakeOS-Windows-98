@@ -30,7 +30,7 @@
           <div class="modal__content">
             <h2 class="modal__heading">Greetings</h2>
             <p class="modal__para">Your randomly generated greeting is:</p>
-            <p class="modal__para"><strong>Hello There</strong></p>
+            <p class="modal__para"><strong id="greetingsText"></strong></p>
           </div>
         </section>
         <section class="main__modal" id="numberGuess">
@@ -39,10 +39,16 @@
             <h2 class="modal__heading">Number Guess</h2>
             <p class="modal__para">Guess a number between 0 and 9</p>
             <form class="modal__form">
-              <input type="text" />
-              <button type="submit">Submit</button>
+              <input
+                id="numberInput"
+                class="form__input"
+                type="number"
+                min="0"
+                max="9"
+              />
+              <button id="numberSubmit" type="submit">Submit</button>
             </form>
-            <p class="modal__para">You haven't guessed my number yet</p>
+            <p id="guessResult" class="modal__para"></p>
           </div>
         </section>
         <section class="main__modal" id="photoGallery">
@@ -50,10 +56,26 @@
           <div class="modal__content">
             <h2 class="modal__heading">Photo Gallery</h2>
             <div class="modal__photo-gallery">
-              <img src="" alt="Photo 1" />
-              <img src="" alt="Photo 2" />
-              <img src="" alt="Photo 3" />
-              <img src="" alt="Photo 4" />
+              <img
+                class="photo-gallery__photo"
+                src="./assets/images/summer.jpg"
+                alt="Summer"
+              />
+              <img
+                class="photo-gallery__photo"
+                src="./assets/images/autumn.jpg"
+                alt="Autumn"
+              />
+              <img
+                class="photo-gallery__photo"
+                src="./assets/images/winter.jpg"
+                alt="Winter"
+              />
+              <img
+                class="photo-gallery__photo"
+                src="./assets/images/spring.jpg"
+                alt="Spring"
+              />
             </div>
           </div>
         </section>
