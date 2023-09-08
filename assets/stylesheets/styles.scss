@@ -7,13 +7,34 @@ body {
   background-image: url(../images/windows-98-background.jpg);
   background-size: cover;
 
-  main {
+  .main {
     padding: 20px;
 
-    section {
+    .main__buttons {
       display: flex;
 
-      &.main__modal {
+      .main__button {
+        display: flex;
+        flex-direction: column;
+        margin: 0 20px 0 0;
+        padding: 8px;
+        background-color: lightgrey;
+        border: 1px solid black;
+
+        .button__icon {
+          padding: 4px;
+          color: darkblue;
+          font-size: 36px;
+        }
+      }
+    }
+
+    .main__modals {
+      display: flex;
+      justify-content: space-around;
+      margin: 20px 0 0 0;
+
+      .main__modal {
         display: none;
         flex-direction: column;
         padding: 20px;
@@ -25,41 +46,20 @@ body {
           display: flex;
         }
 
-        form {
+        .modal__form {
           display: flex;
         }
 
-        div.image-gallery {
+        .modal__image-gallery {
           display: grid;
           grid-template: 1fr 1fr / 1fr 1fr;
         }
       }
-
-      button {
-        display: flex;
-        flex-direction: column;
-        margin: 0 20px 0 0;
-        padding: 8px;
-        background-color: lightgrey;
-        border: 1px solid black;
-
-        i {
-          padding: 4px;
-          color: darkblue;
-          font-size: 36px;
-        }
-      }
-    }
-
-    div.main__modals {
-      display: flex;
-      justify-content: space-around;
-      margin: 20px 0 0 0;
     }
   }
 
-  footer {
-    .menubar__menu {
+  .menubar {
+    .menubar__start-menu {
       display: none;
       margin: 0;
       padding: 0;
@@ -70,20 +70,20 @@ body {
         flex-direction: column;
       }
 
-      li {
+      .menubar__item {
         width: 120px;
         padding: 4px 12px;
         background-color: lightgrey;
         border: 1px solid black;
 
-        i {
+        .item__icon {
           width: 20px;
           padding: 0 8px 0 0;
         }
       }
     }
 
-    nav {
+    .menubar__main-menu {
       display: flex;
       justify-content: space-between;
       padding: 4px;
@@ -91,7 +91,7 @@ body {
       border: 1px solid black;
 
       .menubar__clock {
-        padding: 2px 4px;
+        padding: 4px 4px 0;
         border: 1px solid black;
       }
     }

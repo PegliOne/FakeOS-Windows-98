@@ -7,31 +7,13 @@ body {
   background-image: url(../images/windows-98-background.jpg);
   background-size: cover;
 }
-body main {
+body .main {
   padding: 20px;
 }
-body main section {
+body .main .main__buttons {
   display: flex;
 }
-body main section.main__modal {
-  display: none;
-  flex-direction: column;
-  padding: 20px;
-  background-color: lightgrey;
-  border: 1px solid black;
-  text-align: center;
-}
-body main section.main__modal--show {
-  display: flex;
-}
-body main section.main__modal form {
-  display: flex;
-}
-body main section.main__modal div.image-gallery {
-  display: grid;
-  grid-template: 1fr 1fr/1fr 1fr;
-}
-body main section button {
+body .main .main__buttons .main__button {
   display: flex;
   flex-direction: column;
   margin: 0 20px 0 0;
@@ -39,44 +21,62 @@ body main section button {
   background-color: lightgrey;
   border: 1px solid black;
 }
-body main section button i {
+body .main .main__buttons .main__button .button__icon {
   padding: 4px;
   color: darkblue;
   font-size: 36px;
 }
-body main div.main__modals {
+body .main .main__modals {
   display: flex;
   justify-content: space-around;
   margin: 20px 0 0 0;
 }
-body footer .menubar__menu {
+body .main .main__modals .main__modal {
+  display: none;
+  flex-direction: column;
+  padding: 20px;
+  background-color: lightgrey;
+  border: 1px solid black;
+  text-align: center;
+}
+body .main .main__modals .main__modal--show {
+  display: flex;
+}
+body .main .main__modals .main__modal .modal__form {
+  display: flex;
+}
+body .main .main__modals .main__modal .modal__image-gallery {
+  display: grid;
+  grid-template: 1fr 1fr/1fr 1fr;
+}
+body .menubar .menubar__start-menu {
   display: none;
   margin: 0;
   padding: 0;
   list-style: none;
 }
-body footer .menubar__menu--show {
+body .menubar .menubar__start-menu--show {
   display: flex;
   flex-direction: column;
 }
-body footer .menubar__menu li {
+body .menubar .menubar__start-menu .menubar__item {
   width: 120px;
   padding: 4px 12px;
   background-color: lightgrey;
   border: 1px solid black;
 }
-body footer .menubar__menu li i {
+body .menubar .menubar__start-menu .menubar__item .item__icon {
   width: 20px;
   padding: 0 8px 0 0;
 }
-body footer nav {
+body .menubar .menubar__main-menu {
   display: flex;
   justify-content: space-between;
   padding: 4px;
   background-color: lightgrey;
   border: 1px solid black;
 }
-body footer nav .menubar__clock {
-  padding: 2px 4px;
+body .menubar .menubar__main-menu .menubar__clock {
+  padding: 4px 4px 0;
   border: 1px solid black;
 }

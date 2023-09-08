@@ -1,10 +1,10 @@
 // Show/Hide Menu
 
-const menubarMenu = document.querySelector(".menubar__menu");
+const menubarMenu = document.querySelector(".menubar__start-menu");
 const menubarButton = document.querySelector(".menubar__button");
 
 menubarButton.addEventListener("click", (event) => {
-  menubarMenu.classList.toggle("menubar__menu--show");
+  menubarMenu.classList.toggle("menubar__start-menu--show");
 });
 
 // Show/Hide Apps
@@ -12,7 +12,6 @@ menubarButton.addEventListener("click", (event) => {
 const appButtons = document.querySelectorAll(".main__buttons button");
 const modals = document.querySelectorAll(".main__modal");
 const closeButtons = document.querySelectorAll(".modal__close-button");
-console.log(closeButtons);
 
 appButtons.forEach((button) => {
   button.addEventListener("click", (event) => {
