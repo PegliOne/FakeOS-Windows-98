@@ -1,0 +1,25 @@
+@use "../partials/pallete";
+@use "../partials/mixins";
+
+.main__buttons {
+  display: flex;
+
+  .main__button {
+    @include mixins.flexbox-column-styles(space-between);
+    @include mixins.main-component-colors;
+    align-items: center;
+    width: 100px;
+    margin: 0 20px 0 0;
+    padding: 8px;
+
+    &:hover {
+      background-color: pallete.$hover-color;
+      cursor: pointer;
+    }
+
+    .button__icon {
+      padding: 4px;
+      font-size: 36px;
+    }
+  }
+}

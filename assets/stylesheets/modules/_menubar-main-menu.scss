@@ -1,0 +1,29 @@
+@use "../partials/pallete";
+@use "../partials/mixins";
+
+.menubar__main-menu {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px;
+  background-color: pallete.$primary-color;
+  border-top: 2px solid pallete.$primary-border-color;
+
+  .menubar__button {
+    background: none;
+    border: 2px solid pallete.$primary-border-color;
+
+    &--clicked {
+      @include mixins.border-styles(pallete.$tertiary-border-color);
+    }
+
+    &:hover {
+      background-color: pallete.$hover-color;
+      cursor: pointer;
+    }
+  }
+
+  .menubar__clock {
+    padding: 2px 4px;
+    @include mixins.border-styles;
+  }
+}
