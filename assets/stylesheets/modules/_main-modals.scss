@@ -44,10 +44,15 @@
     .modal__form {
       display: flex;
       justify-content: center;
+      align-items: center;
+
+      .form__label {
+        padding-top: 2px;
+      }
 
       .form__input {
-        padding: 0 8px;
-        margin-right: 8px;
+        width: 50px;
+        margin: 0 8px;
         text-align: center;
       }
     }
