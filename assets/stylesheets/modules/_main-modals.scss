@@ -1,0 +1,73 @@
+@use "../partials/pallete";
+@use "../partials/mixins";
+
+.main__modals {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0 0 0;
+
+  .main__modal {
+    @include mixins.main-component-colors;
+    display: none;
+    flex-direction: column;
+    text-align: center;
+
+    &--show {
+      display: flex;
+      align-items: flex-end;
+    }
+
+    .modal__close-button {
+      width: fit-content;
+      padding: 4px 8px;
+      border: none;
+
+      &:hover {
+        background-color: pallete.$hover-color;
+        cursor: pointer;
+      }
+    }
+
+    .modal__content {
+      padding: 0 20px 12px;
+
+      .modal__heading {
+        margin: 0 0 20px 0;
+      }
+
+      .modal__para {
+        height: 24px;
+        margin: 12px 0;
+      }
+    }
+
+    .modal__form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .form__label {
+        padding-top: 2px;
+      }
+
+      .form__input {
+        width: 50px;
+        margin: 0 8px;
+        text-align: center;
+      }
+    }
+
+    .modal__photo-gallery {
+      display: grid;
+      grid-template: 1fr 1fr / 1fr 1fr;
+      gap: 12px;
+      padding-bottom: 8px;
+
+      .photo-gallery__photo {
+        width: 200px;
+        height: 120px;
+        border: 1px solid pallete.$secondary-color;
+      }
+    }
+  }
+}

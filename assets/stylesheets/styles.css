@@ -1,0 +1,169 @@
+.main__buttons {
+  display: flex;
+}
+.main__buttons .main__button {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: navy;
+  background-color: lightgrey;
+  border: 2px solid navy;
+  align-items: center;
+  width: 100px;
+  margin: 0 20px 0 0;
+  padding: 8px;
+}
+.main__buttons .main__button:hover {
+  background-color: silver;
+  cursor: pointer;
+}
+.main__buttons .main__button .button__icon {
+  padding: 4px;
+  font-size: 36px;
+}
+
+.main__modals {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0 0 0;
+}
+.main__modals .main__modal {
+  color: navy;
+  background-color: lightgrey;
+  border: 2px solid navy;
+  display: none;
+  flex-direction: column;
+  text-align: center;
+}
+.main__modals .main__modal--show {
+  display: flex;
+  align-items: flex-end;
+}
+.main__modals .main__modal .modal__close-button {
+  width: fit-content;
+  padding: 4px 8px;
+  border: none;
+}
+.main__modals .main__modal .modal__close-button:hover {
+  background-color: silver;
+  cursor: pointer;
+}
+.main__modals .main__modal .modal__content {
+  padding: 0 20px 12px;
+}
+.main__modals .main__modal .modal__content .modal__heading {
+  margin: 0 0 20px 0;
+}
+.main__modals .main__modal .modal__content .modal__para {
+  height: 24px;
+  margin: 12px 0;
+}
+.main__modals .main__modal .modal__form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main__modals .main__modal .modal__form .form__label {
+  padding-top: 2px;
+}
+.main__modals .main__modal .modal__form .form__input {
+  width: 50px;
+  margin: 0 8px;
+  text-align: center;
+}
+.main__modals .main__modal .modal__photo-gallery {
+  display: grid;
+  grid-template: 1fr 1fr/1fr 1fr;
+  gap: 12px;
+  padding-bottom: 8px;
+}
+.main__modals .main__modal .modal__photo-gallery .photo-gallery__photo {
+  width: 200px;
+  height: 120px;
+  border: 1px solid navy;
+}
+
+.menubar__start-menu {
+  display: none;
+}
+.menubar__start-menu--show {
+  display: flex;
+}
+.menubar__start-menu .start-menu__brand {
+  padding: 8px 4px;
+  color: white;
+  background: linear-gradient(dodgerblue, navy);
+  transform: rotate(180deg);
+  writing-mode: vertical-lr;
+}
+.menubar__start-menu .start-menu__list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  background-color: lightgrey;
+  border: 2px solid white;
+  border-right: 2px solid darkgrey;
+  border-bottom: none;
+}
+.menubar__start-menu .start-menu__list .start-menu__item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 12px;
+}
+.menubar__start-menu .start-menu__list .start-menu__item--last {
+  border-bottom: none;
+}
+.menubar__start-menu .start-menu__list .start-menu__item:hover {
+  background-color: silver;
+  cursor: pointer;
+}
+.menubar__start-menu .start-menu__list .start-menu__item .item__icon {
+  width: 20px;
+  padding-right: 8px;
+}
+.menubar__start-menu .start-menu__list .start-menu__item .item__arrow {
+  padding-left: 8px;
+}
+
+.menubar__main-menu {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px;
+  background-color: lightgrey;
+  border-top: 2px solid darkgrey;
+}
+.menubar__main-menu .menubar__button {
+  background: none;
+  border: 2px solid darkgrey;
+}
+.menubar__main-menu .menubar__button--clicked {
+  border: 2px solid black;
+  border-right: 2px solid white;
+  border-bottom: 2px solid white;
+}
+.menubar__main-menu .menubar__button:hover {
+  background-color: silver;
+  cursor: pointer;
+}
+.menubar__main-menu .menubar__clock {
+  padding: 2px 4px;
+  border: 2px solid darkgrey;
+  border-right: 2px solid white;
+  border-bottom: 2px solid white;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  margin: 0;
+  background-image: url(../images/windows-98-background.jpg);
+  background-size: cover;
+}
+body .main {
+  padding: 20px;
+}

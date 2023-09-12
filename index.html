@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/2101b92750.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./assets/stylesheets/styles.css" />
+    <script type="module" src="./script.js" defer></script>
+    <title>FakeOS: Windows 98</title>
+  </head>
+  <body>
+    <main class="main">
+      <section class="main__buttons">
+        <button class="main__button" value="greetings">
+          <i class="button__icon fa-regular fa-face-smile"></i>Greetings
+        </button>
+        <button class="main__button" value="numberGuess">
+          <i class="button__icon fa-solid fa-question"></i>Number Guess
+        </button>
+        <button class="main__button" value="photoGallery">
+          <i class="button__icon fa-regular fa-image"></i>Photo Gallery
+        </button>
+      </section>
+      <section class="main__modals">
+        <section class="main__modal" id="greetings">
+          <button class="modal__close-button" value="greetings">x</button>
+          <div class="modal__content">
+            <h2 class="modal__heading">Greetings</h2>
+            <p class="modal__para">Your randomly generated greeting is:</p>
+            <p class="modal__para"><strong id="greetingsText"></strong></p>
+          </div>
+        </section>
+        <section class="main__modal" id="numberGuess">
+          <button class="modal__close-button" value="numberGuess">x</button>
+          <div class="modal__content">
+            <h2 class="modal__heading">Number Guess</h2>
+            <p class="modal__para">Guess a number between 0 and 9</p>
+            <form class="modal__form">
+              <label class="form__label" for="numberInput">Number: </label>
+              <input
+                id="numberInput"
+                class="form__input"
+                type="number"
+                min="0"
+                max="9"
+              />
+              <button id="numberSubmit" type="submit">Submit</button>
+            </form>
+            <p id="guessResult" class="modal__para"></p>
+          </div>
+        </section>
+        <section class="main__modal" id="photoGallery">
+          <button class="modal__close-button" value="photoGallery">x</button>
+          <div class="modal__content">
+            <h2 class="modal__heading">Photo Gallery</h2>
+            <div class="modal__photo-gallery">
+              <img
+                class="photo-gallery__photo"
+                src="./assets/images/summer.jpg"
+                alt="Summer"
+              />
+              <img
+                class="photo-gallery__photo"
+                src="./assets/images/autumn.jpg"
+                alt="Autumn"
+              />
+              <img
+                class="photo-gallery__photo"
+                src="./assets/images/winter.jpg"
+                alt="Winter"
+              />
+              <img
+                class="photo-gallery__photo"
+                src="./assets/images/spring.jpg"
+                alt="Spring"
+              />
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+    <footer class="menubar">
+      <section class="menubar__start-menu">
+        <div class="start-menu__brand"><strong>Windows</strong> 98</div>
+        <ul class="start-menu__list">
+          <li class="start-menu__item">
+            <span><i class="item__icon fa-solid fa-computer"></i>Programs</span>
+            <i class="item__arrow fa-solid fa-caret-right"></i>
+          </li>
+          <li class="start-menu__item">
+            <span><i class="item__icon fa-solid fa-photo-film"></i>Photos</span>
+            <i class="item__arrow fa-solid fa-caret-right"></i>
+          </li>
+          <li class="start-menu__item">
+            <span>
+              <i class="item__icon fa-solid fa-mobile-retro"></i>Applications
+            </span>
+            <i class="item__arrow fa-solid fa-caret-right"></i>
+          </li>
+          <li class="start-menu__item">
+            <span><i class="item__icon fa-solid fa-gamepad"></i>Games</span>
+            <i class="item__arrow fa-solid fa-caret-right"></i>
+          </li>
+          <li class="start-menu__item">
+            <span><i class="item__icon fa-solid fa-gear"></i>Settings</span>
+          </li>
+          <li class="start-menu__item">
+            <span>
+              <i class="item__icon fa-solid fa-magnifying-glass"></i>Find
+            </span>
+          </li>
+          <li class="start-menu__item">
+            <span>
+              <i class="item__icon fa-solid fa-handshake-angle"></i>Help
+            </span>
+          </li>
+          <li class="start-menu__item">
+            <span>
+              <i class="item__icon fa-solid fa-person-running"></i>Run
+            </span>
+          </li>
+          <li class="start-menu__item">
+            <span><i class="item__icon fa-solid fa-user"></i>Log Off</span>
+          </li>
+          <li class="start-menu__item start-menu__item--last">
+            <span>
+              <i class="item__icon fa-solid fa-power-off"></i>Shutdown
+            </span>
+          </li>
+        </ul>
+      </section>
+      <nav class="menubar__main-menu">
+        <button class="menubar__button">
+          <i class="menubar__icon fa-brands fa-windows"></i>
+          <strong>Start</strong>
+        </button>
+        <div class="menubar__clock"></div>
+      </nav>
+    </footer>
+  </body>
+</html>

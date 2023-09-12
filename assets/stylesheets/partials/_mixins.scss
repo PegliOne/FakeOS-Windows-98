@@ -1,0 +1,22 @@
+@use "./pallete";
+
+@mixin flexbox-column-styles($justify-content: space-between) {
+  display: flex;
+  flex-direction: column;
+  justify-content: $justify-content;
+}
+
+@mixin main-component-colors {
+  color: pallete.$secondary-color;
+  background-color: pallete.$primary-color;
+  border: 2px solid pallete.$secondary-color;
+}
+
+@mixin border-styles(
+  $left-and-top-border-color: pallete.$primary-border-color,
+  $has-bottom-border: true
+) {
+  border: 2px solid $left-and-top-border-color;
+  border-right: 2px solid pallete.$secondary-border-color;
+  border-bottom: 2px solid pallete.$secondary-border-color;
+}

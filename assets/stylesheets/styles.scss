@@ -1,0 +1,17 @@
+@use "./modules/main-buttons";
+@use "./modules/main-modals";
+@use "./modules/menubar-start-menu";
+@use "./modules/menubar-main-menu";
+@use "./partials/mixins";
+
+body {
+  @include mixins.flexbox-column-styles;
+  height: 100vh;
+  margin: 0;
+  background-image: url(../images/windows-98-background.jpg);
+  background-size: cover;
+
+  .main {
+    padding: 20px;
+  }
+}
