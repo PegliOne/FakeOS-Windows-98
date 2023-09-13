@@ -5,17 +5,7 @@ export const showGreeting = () => {
 };
 
 const selectGreeting = () => {
-  let randomNum = Math.random();
-  let greeting = "";
-
-  if (randomNum < 0.25) {
-    greeting = "Hello There!";
-  } else if (randomNum < 0.5) {
-    greeting = "Bonjour!";
-  } else if (randomNum < 0.75) {
-    greeting = "Hola!";
-  } else {
-    greeting = "Hey, what's up?";
-  }
-  return greeting;
+  const greetings = ["Hello There!", "Bonjour!", "Hola!", "Hey, what's up?"];
+  let index = Math.floor(Math.random() * greetings.length);
+  return greetings[index];
 };

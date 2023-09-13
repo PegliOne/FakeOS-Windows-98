@@ -13,9 +13,12 @@ export const hideMenu = (button, menu) => {
 
 export const getTime = () => {
   const time = new Date();
-  const hours = time.getHours();
-  const minutes =
-    time.getMinutes() < 10 ? `0${time.getMinutes()}` : time.getMinutes();
-  const amOrPM = hours < 12 ? "AM" : "PM";
-  return `${hours}:${minutes} ${amOrPM}`;
+  const amOrPM = time.getHours() < 12 ? " AM" : " PM";
+  return (
+    time.toLocaleTimeString("en-US", {
+      hour: "2-digit",
+      minute: "2-digit",
+      hour12: false,
+    }) + amOrPM
+  );
 };
