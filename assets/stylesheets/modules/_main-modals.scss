@@ -37,7 +37,15 @@
 
       .modal__para {
         height: 24px;
-        margin: 12px 0;
+        margin: 16px 0 8px;
+
+        &--success {
+          color: pallete.$success-color;
+        }
+
+        &--danger {
+          color: pallete.$danger-color;
+        }
       }
     }
 
