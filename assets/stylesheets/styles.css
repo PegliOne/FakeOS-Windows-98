@@ -56,7 +56,13 @@
 }
 .main__modals .main__modal .modal__content .modal__para {
   height: 24px;
-  margin: 12px 0;
+  margin: 16px 0 8px;
+}
+.main__modals .main__modal .modal__content .modal__para--success {
+  color: darkgreen;
+}
+.main__modals .main__modal .modal__content .modal__para--danger {
+  color: darkred;
 }
 .main__modals .main__modal .modal__form {
   display: flex;
