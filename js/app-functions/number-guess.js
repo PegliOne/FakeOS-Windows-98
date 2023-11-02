@@ -1,10 +1,19 @@
 export const setUpNumberGuess = () => {
+  const guessCountSpan = document.querySelector("#guessCountSpan");
   const numberSubmit = document.querySelector("#numberSubmit");
+
   let correctNumber = Math.floor(Math.random() * 100 + 1);
+  let remainingGuessCount = 6;
+
+  guessCountSpan.textContent = remainingGuessCount;
 
   numberSubmit.addEventListener("click", (event) => {
     event.preventDefault();
-    checkGuess(correctNumber);
+    if (remainingGuessCount > 0) {
+      checkGuess(correctNumber, remainingGuessCount);
+      remainingGuessCount--;
+      guessCountSpan.textContent = remainingGuessCount;
+    }
   });
 };
 
@@ -17,6 +26,7 @@ const checkGuess = (correctNumber) => {
   if (guess === correctNumber) {
     guessResult.textContent = "Correct!";
     guessResult.classList.add("modal__para--success");
+    return;
   } else if (guess > correctNumber) {
     guessResult.textContent = "Too high!";
     guessResult.classList.add("modal__para--danger");

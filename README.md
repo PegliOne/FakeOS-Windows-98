@@ -36,7 +36,9 @@ When Greetings is opened, it selects and displays a random greeting. The options
 
 When Number Guess is opened, it selects a number between 1 and 100. To guess the number, enter a value in the input and click the submit button.
 
-A message will be displayed to inform the user of whether they've selected the collect number, a number that's too high or a number that's too low. The user may make as many guess as they like. The correct number will remain the same until the app is closed and reopened.
+A message will be displayed to inform the user of whether they've selected the collect number, a number that's too high or a number that's too low. The correct number will remain the same until the app is closed.
+
+The must guess the correct number within six guesses. The number of guess remainining is displayed in the app. When it reaches 0, the game is over and the user cannot make further guesses. The user can close and reopen the app to play again with a new target number.
 
 ### Image Gallery
 

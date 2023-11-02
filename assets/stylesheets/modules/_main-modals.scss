@@ -37,7 +37,7 @@
 
       .modal__para {
         height: 24px;
-        margin: 16px 0 8px;
+        margin: 8px 0;
 
         &--success {
           color: pallete.$success-color;
@@ -53,6 +53,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      margin: 8px 0 16px;
 
       .form__label {
         padding-top: 2px;
