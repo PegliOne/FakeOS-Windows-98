@@ -38,7 +38,7 @@ When Number Guess is opened, it selects a number between 1 and 100. To guess the
 
 A message will be displayed to inform the user of whether they've selected the collect number, a number that's too high or a number that's too low. The correct number will remain the same until the app is closed.
 
-The must guess the correct number within six guesses. The number of guess remainining is displayed in the app. When it reaches 0, the game is over and the user cannot make further guesses. The user can close and reopen the app to play again with a new target number.
+The user must guess the correct number within six guesses. The number of guesses remainining is displayed in the app. When it reaches 0, the game is over and the user cannot make further guesses. The user can close and reopen the app to play again with a new target number.
 
 ### Image Gallery
 
