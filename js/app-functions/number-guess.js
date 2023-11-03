@@ -3,10 +3,12 @@
 export const setUpNumberGuess = () => {
   const guessCountSpan = document.querySelector("#guessCountSpan");
   const numberSubmit = document.querySelector("#numberSubmit");
+  const answerPara = document.querySelector("#answerPara");
 
   let correctNumber = Math.floor(Math.random() * 100 + 1);
   let remainingGuessCount = 6;
 
+  answerPara.textContent = "";
   guessCountSpan.textContent = remainingGuessCount;
 
   numberSubmit.addEventListener("click", (event) => {
@@ -41,6 +43,7 @@ const checkGuess = (correctNumber, isLastGuess) => {
 
   if (isLastGuess) {
     message += " Game Over!";
+    answerPara.textContent = `The correct number is ${correctNumber}.`;
   }
 
   guessResult.textContent = message;
