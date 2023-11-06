@@ -2,22 +2,28 @@
 
 export const setUpNumberGuess = () => {
   const guessCountSpan = document.querySelector("#guessCountSpan");
-  const numberSubmit = document.querySelector("#numberSubmit");
+  const numberForm = document.querySelector("#numberForm");
   const answerPara = document.querySelector("#answerPara");
 
   let correctNumber = Math.floor(Math.random() * 100 + 1);
   let remainingGuessCount = 6;
 
+  numberForm.reset();
   answerPara.textContent = "";
   guessCountSpan.textContent = remainingGuessCount;
 
-  numberSubmit.addEventListener("click", (event) => {
+  numberForm.addEventListener("submit", (event) => {
     event.preventDefault();
     const isLastGuess = remainingGuessCount === 1;
     if (remainingGuessCount > 0) {
-      checkGuess(correctNumber, isLastGuess);
-      remainingGuessCount--;
-      guessCountSpan.textContent = remainingGuessCount;
+      const isCorrectGuess = checkGuess(correctNumber, isLastGuess);
+      if (isCorrectGuess) {
+        // stops user guessing after they've already gotten the correct answer
+        remainingGuessCount = 0;
+      } else {
+        remainingGuessCount--;
+        guessCountSpan.textContent = remainingGuessCount;
+      }
     }
   });
 };
@@ -32,7 +38,7 @@ const checkGuess = (correctNumber, isLastGuess) => {
   if (guess === correctNumber) {
     guessResult.textContent = "Correct, You Win!";
     guessResult.classList.add("modal__para--success");
-    return;
+    return true;
   }
 
   if (guess > correctNumber) {
@@ -48,6 +54,7 @@ const checkGuess = (correctNumber, isLastGuess) => {
 
   guessResult.textContent = message;
   guessResult.classList.add("modal__para--danger");
+  return false;
 };
 
 export const clearResult = () => {
