@@ -4,6 +4,7 @@ export const setUpNumberGuess = () => {
   const guessCountSpan = document.querySelector("#guessCountSpan");
   const numberForm = document.querySelector("#numberForm");
   const answerPara = document.querySelector("#answerPara");
+  const submitButton = document.querySelector("#submitButton");
 
   let correctNumber = Math.floor(Math.random() * 100 + 1);
   let remainingGuessCount = 6;
@@ -11,6 +12,7 @@ export const setUpNumberGuess = () => {
   numberForm.reset();
   answerPara.textContent = "";
   guessCountSpan.textContent = remainingGuessCount;
+  submitButton.textContent = "Submit";
 
   numberForm.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -38,6 +40,7 @@ const checkGuess = (correctNumber, isLastGuess) => {
   if (guess === correctNumber) {
     guessResult.textContent = "Correct, You Win!";
     guessResult.classList.add("modal__para--success");
+    submitButton.textContent = "Restart Game";
     return true;
   }
 
@@ -50,6 +53,7 @@ const checkGuess = (correctNumber, isLastGuess) => {
   if (isLastGuess) {
     message += " Game Over!";
     answerPara.textContent = `The correct number is ${correctNumber}.`;
+    submitButton.textContent = "Restart Game";
   }
 
   guessResult.textContent = message;
