@@ -41,7 +41,7 @@
             <p class="modal__para">
               Guesses Remaining: <span id="guessCountSpan">5</span>
             </p>
-            <form class="modal__form">
+            <form id="numberForm" class="modal__form">
               <label class="form__label" for="numberInput">Number: </label>
               <input
                 id="numberInput"
@@ -50,7 +50,9 @@
                 min="1"
                 max="100"
               />
-              <button id="numberSubmit" type="submit">Submit</button>
+              <button id="submitButton" type="submit" class="form__button">
+                Submit
+              </button>
             </form>
             <p id="guessResult" class="modal__para"></p>
             <p id="answerPara" class="modal__para"></p>
