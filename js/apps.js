@@ -10,15 +10,15 @@ export const showApp = (event, modals, menuButton, startMenu) => {
 
   // Set up and Show App
   const { targetId, targetModal } = getModal(event);
-  setUpApp(targetId);
+  setUpApp(targetId, event);
   targetModal.classList.add("main__modal--show");
 };
 
-const setUpApp = (targetId) => {
+const setUpApp = (targetId, event) => {
   if (targetId === "greetings") {
     showGreeting();
   } else if (targetId === "numberGuess") {
-    setUpNumberGuess();
+    setUpNumberGuess(event);
   }
 };
 

@@ -78,6 +78,9 @@
   margin: 0 8px;
   text-align: center;
 }
+.main__modals .main__modal .modal__form .form__button {
+  width: 100px;
+}
 .main__modals .main__modal .modal__photo-gallery {
   display: grid;
   grid-template: 1fr 1fr/1fr 1fr;
@@ -174,5 +177,3 @@ body {
 body .main {
   padding: 20px;
 }
-
-/*# sourceMappingURL=styles.css.map */
