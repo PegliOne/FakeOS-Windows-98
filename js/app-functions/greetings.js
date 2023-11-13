@@ -5,7 +5,16 @@ export const showGreeting = () => {
 };
 
 const selectGreeting = () => {
-  const greetings = ["Hello There!", "Bonjour!", "Hola!", "Hey, what's up?"];
+  const greetings = [
+    "Hello there!",
+    "Bonjour!",
+    "¡Hola!",
+    "Guten Tag!",
+    "Hey, how are you going?",
+    "G'day, mate!",
+    "Hi, what's up?",
+    "Howdy there, partner!",
+  ];
   let index = Math.floor(Math.random() * greetings.length);
   return greetings[index];
 };
