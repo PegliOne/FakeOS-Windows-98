@@ -30,7 +30,7 @@ To close an app, click the x button in its top right corner.
 
 ### Greetings
 
-When Greetings is opened, it selects and displays a random greeting. The options are "Hello There!" (yes, that's a Star Wars prequel reference), "Bonjour!", "Hola!" and "Hey, what's up?"
+When Greetings is opened, it selects and displays a random greeting. The options are "Hello there!" (yes, that's a Star Wars prequel reference), "Bonjour!", "¡Hola!", "Guten Tag!", "Hey, how are you going?", "G'day mate!", "Hi, what's up?" and "Howdy there, partner!". A new greeting is selected at random each time the app is closed and reopened.
 
 ### Number Guess
 
