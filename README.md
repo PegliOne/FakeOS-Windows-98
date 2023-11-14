@@ -34,7 +34,7 @@ When Greetings is opened, it selects and displays a random greeting. The options
 
 ### Number Guess
 
-When Number Guess is opened (or restarted), it selects a number between 1 and 100. To guess the number, enter a value in the input and click the submit button. Non-numerical inputs or inputs outside of the 1 - 100 range will not be accepted.
+When Number Guess is opened (or restarted), it selects a number between 1 and 100. To guess the number, enter a value in the input and click the submit button. Blank inputs, non-numerical inputs and inputs outside of the 1 - 100 range will not be accepted.
 
 A message will be displayed stating whether the number selected was the correct number, a number that's too high or a number that's too low. The correct number will remain the same until the game ends.
 
