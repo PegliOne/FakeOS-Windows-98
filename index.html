@@ -31,6 +31,9 @@
             <h2 class="modal__heading">Greetings</h2>
             <p class="modal__para">Your randomly generated greeting is:</p>
             <p class="modal__para"><strong id="greetingsText"></strong></p>
+            <button id="greetingsButton" class="greetings__button">
+              New Greeting
+            </button>
           </div>
         </section>
         <section class="main__modal" id="numberGuess">
@@ -49,6 +52,7 @@
                 type="number"
                 min="1"
                 max="100"
+                required
               />
               <button id="submitButton" type="submit" class="form__button">
                 Submit
