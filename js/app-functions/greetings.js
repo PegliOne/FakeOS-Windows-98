@@ -1,4 +1,10 @@
-export const showGreeting = () => {
+export const setUpGreetings = () => {
+  const greetingsButton = document.querySelector("#greetingsButton");
+  greetingsButton.addEventListener("click", showGreeting);
+  showGreeting();
+}
+
+const showGreeting = () => {
   const greetingsText = document.querySelector("#greetingsText");
   const greeting = selectGreeting();
   greetingsText.textContent = greeting;

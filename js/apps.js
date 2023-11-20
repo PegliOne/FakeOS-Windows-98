@@ -1,6 +1,6 @@
 import { getModal, hideAllModals } from "./modals.js";
 import { hideMenu } from "./menubar.js";
-import { showGreeting } from "./app-functions/greetings.js";
+import { setUpGreetings } from "./app-functions/greetings.js";
 import { setUpNumberGuess, clearResult } from "./app-functions/number-guess.js";
 
 export const showApp = (event, modals, menuButton, startMenu) => {
@@ -16,7 +16,7 @@ export const showApp = (event, modals, menuButton, startMenu) => {
 
 const setUpApp = (targetId, event) => {
   if (targetId === "greetings") {
-    showGreeting();
+    setUpGreetings();
   } else if (targetId === "numberGuess") {
     setUpNumberGuess(event);
   }
