@@ -64,6 +64,9 @@
 .main__modals .main__modal .modal__content .modal__para--danger {
   color: darkred;
 }
+.main__modals .main__modal .modal__content .modal__button {
+  margin-bottom: 8px;
+}
 .main__modals .main__modal .modal__form {
   display: flex;
   justify-content: center;
