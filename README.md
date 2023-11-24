@@ -2,6 +2,8 @@
 
 This is a fake desktop operating system inspired by Windows 98.
 
+Hosted Site: https://peglione.github.io/FakeOS-Windows-98/
+
 ## How To Use
 
 This app should be viewed on a desktop sized screen to get the best experience
