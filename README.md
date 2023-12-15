@@ -1,8 +1,10 @@
 # FakeOS: Windows 98
 
-This is a fake desktop operating system inspired by Windows 98.
-
 Hosted Site: https://peglione.github.io/FakeOS-Windows-98/
+
+## Summary
+
+A fake operating system created using HTML, SCSS and JavaScript. Features include a fake start menu and three modals with simple apps.
 
 ## How To Use
 
