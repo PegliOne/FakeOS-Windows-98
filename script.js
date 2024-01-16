@@ -40,6 +40,6 @@ appButtons.forEach((button) => {
 
 closeButtons.forEach((button) => {
   button.addEventListener("click", (event) => {
-    hideApp(event);
+    hideApp(modals);
   });
 });
