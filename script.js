@@ -10,6 +10,7 @@ import { toggleMenu, getTime } from "./js/menubar.js";
 const appButtons = document.querySelectorAll(".main__buttons button");
 const modals = document.querySelectorAll(".main__modal");
 const closeButtons = document.querySelectorAll(".modal__close-button");
+const overlay = document.querySelector(".overlay");
 
 // Menu Elements
 
@@ -42,4 +43,8 @@ closeButtons.forEach((button) => {
   button.addEventListener("click", (event) => {
     hideApp(modals);
   });
+});
+
+overlay.addEventListener("click", () => {
+  hideApp(modals);
 });
