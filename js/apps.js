@@ -22,11 +22,10 @@ const setUpApp = (targetId, event) => {
   }
 };
 
-export const hideApp = (event) => {
+export const hideApp = (modals) => {
   // Reset Number Guess App
   clearResult();
 
-  // Hide App Model
-  const { targetModal } = getModal(event);
-  targetModal.classList.remove("main__modal--show");
+  // Hide Modals
+  hideAllModals(modals);
 };

@@ -15,6 +15,7 @@
     &--show {
       display: flex;
       align-items: flex-end;
+      z-index: 1;
     }
 
     .modal__close-button {

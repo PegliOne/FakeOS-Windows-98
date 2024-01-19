@@ -38,6 +38,7 @@
 .main__modals .main__modal--show {
   display: flex;
   align-items: flex-end;
+  z-index: 1;
 }
 .main__modals .main__modal .modal__close-button {
   width: fit-content;
@@ -176,6 +177,22 @@ body {
   margin: 0;
   background-image: url(../images/windows-98-background.jpg);
   background-size: cover;
+}
+body .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 200ms;
+}
+body .overlay--show {
+  opacity: 0.7;
+  z-index: 0;
+}
+body .overlay--show:hover {
+  cursor: pointer;
 }
 body .main {
   padding: 20px;
