@@ -2,8 +2,8 @@
 @use "./modules/main-modals";
 @use "./modules/menubar-start-menu";
 @use "./modules/menubar-main-menu";
+@use "./modules/overlay";
 @use "./partials/mixins";
-@use "./partials/pallete";
 
 body {
   @include mixins.flexbox-column-styles;
@@ -11,25 +11,6 @@ body {
   margin: 0;
   background-image: url(../images/windows-98-background.jpg);
   background-size: cover;
-
-  .overlay {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: pallete.$tertiary-border-color;
-    opacity: 0;
-    z-index: -1;
-    transition: opacity 200ms;
-
-    &--show {
-      opacity: 0.7;
-      z-index: 0;
-
-      &:hover {
-        cursor: pointer;
-      }
-    }
-  }
 
   .main {
     padding: 20px;
