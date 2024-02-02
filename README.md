@@ -26,9 +26,9 @@ The clock in the bottom right corner shows the local time in Melbourne. While us
 
 To open an app, click on its corresponding button in the top left corner. Unlike in the real Window 98 OS, the app buttons have been styled with grey backgrounds, borders and navy text to make them stand out from the background image.
 
-The app will open in a modal. When this happens, any already opened app modal will close. The start menu will hide if it's showing.
+The app will open in a modal. When this happens, any already opened app modal will close and an dark overlay will appear behind the app. The start menu will hide if it's showing.
 
-To close an app, click the x button in its top right corner.
+To close an app, click the x button in the top right corner of its modal or the dark overlay behind it.
 
 ## App Functionality
 
